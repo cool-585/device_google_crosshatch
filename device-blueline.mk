@@ -43,4 +43,8 @@ PRODUCT_COPY_FILES += \
     device/google/crosshatch/nfc/libnfc-nxp.blueline.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G013A.conf \
     device/google/crosshatch/nfc/libnfc-nxp.blueline.ese.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G013B.conf
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-blueline-xd
+
 PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.height_ratio=1.2
