@@ -61,8 +61,17 @@ ifneq (REL,$(PLATFORM_VERSION_CODENAME))
   PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
 endif
 
+# Inherit some common xdroidOSS stuff.
+$(call inherit-product, vendor/xdroid/config/common.mk)
+XDROID_MAINTAINER := cool585
+XDROID_BOOT := 1440
+
+#Gapps
+TARGET_GAPPS_ARCH := arm64
+TARGET_SUPPORTS_QUICK_TAP := true
+
 PRODUCT_MANUFACTURER := Google
-PRODUCT_NAME := aosp_crosshatch
+PRODUCT_NAME := xdroid_crosshatch
 PRODUCT_DEVICE := crosshatch
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 3 XL

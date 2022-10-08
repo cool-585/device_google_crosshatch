@@ -43,6 +43,10 @@ PRODUCT_COPY_FILES += \
     device/google/crosshatch/nfc/libnfc-nxp.crosshatch.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G013C.conf \
     device/google/crosshatch/nfc/libnfc-nxp.crosshatch.ese.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G013D.conf
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-crosshatch-xd
+
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
